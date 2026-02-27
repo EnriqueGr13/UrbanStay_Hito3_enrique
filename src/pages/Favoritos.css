@@ -1,0 +1,58 @@
+.favoritos {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 24px;
+  min-height: 60vh;
+}
+
+/* Título */
+.favoritos h1 {
+  font-size: 2rem;
+  margin-bottom: 24px;
+  color: #222;
+}
+
+/* Estado vacío */
+.vacio {
+  font-size: 1rem;
+  color: #666;
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+/* Grid reutilizando products */
+.products.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+/* Animación suave de aparición */
+.products.grid .card {
+  animation: fadeIn 0.35s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .favoritos {
+    margin: 24px auto;
+    padding: 0 16px;
+  }
+
+  .favoritos h1 {
+    font-size: 1.6rem;
+  }
+}
